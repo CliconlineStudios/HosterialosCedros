@@ -47,6 +47,10 @@ function categorias() {
     document.getElementById("playa").style.display = "none";
     conta=0;
     contador=2;
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        }); 
     
     
 }
