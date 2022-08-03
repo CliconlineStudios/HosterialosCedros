@@ -1,15 +1,80 @@
+let ids = '';
+
+function ids1 () {
+    ids = 'servicios.html';
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
+    pages = 'servicios.html.html';
+
+};
+
+function ids2 () {
+    ids = 'carrito.html';
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
+    pages = 'carrito.html';
+
+};
+
+
+
+window.addEventListener('popstate', e => {
+    backweb();
+    
+});
+
+function backarriba(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });       
+};
+
+let urlclick =`https://devivelo.blogspot.com`; 
+
+function backweb() {
+   
+    if (contador==1) {
+        document.getElementById("sharelink").style.display = "none";
+        document.getElementById("informacion").style.display = "block";
+        document.getElementById("portafolio").style.display = "none";
+        document.getElementById("side").style.display = "none";
+        conta=0;
+        contador=0;
+        backarriba();
+        history.back();
+
+    }
+    else if(contador==2){
+        document.getElementById("portafolio").style.display = "block";
+        document.getElementById("costos").style.display = "none";
+        document.getElementById("restaurante").style.display = "none";
+        document.getElementById("playa").style.display = "none";
+        document.getElementById("screen4").style.display = "none";
+        contador=1;
+        backarriba();
+        ids1();
+
+    }
+    else{
+            history.back();
+        
+    }
+
+    } 
+
 
 function inicio() {
     document.getElementById("informacion").style.display = "block";	
     document.getElementById("portafolio").style.display = "none";
-    document.getElementById("back").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("restaurante").style.display = "none";
     document.getElementById("screen4").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("playa").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=0;
+    backarriba();
+    backweb();
 }
 
 
@@ -22,35 +87,30 @@ var btn = document.getElementById("inicio"),
 
 function servicios() {
 
-if (contador==0) {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("portafolio").style.display = "block";
-    document.getElementById("back").style.display = "block";
     document.getElementById("side").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=1;
-}
-else{
+    ids1();
 
-}
 }
 
 function categorias() {
     document.getElementById("informacion").style.display = "none";	
     document.getElementById("portafolio").style.display = "none";
     document.getElementById("costos").style.display = "block";
-    document.getElementById("back").style.display = "block";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
     document.getElementById("screen4").style.display = "none";
     document.getElementById("restaurante").style.display = "none";
     document.getElementById("playa").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        }); 
+    ids2();
+    backarriba(); 
     
     
 }
@@ -60,12 +120,14 @@ function restaurante() {
     document.getElementById("restaurante").style.display = "block";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
     document.getElementById("costos").style.display = "none";
     document.getElementById("screen4").style.display = "none";
     document.getElementById("playa").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
+    backarriba();
+    ids2();
     
     
 }
@@ -73,18 +135,16 @@ function restaurante() {
 function planes() {
     document.getElementById("screen4").style.display = "block";
     document.getElementById("portafolio").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
     document.getElementById("restaurante").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("playa").style.display = "none";
     conta=0;
-    contador=3; 
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        });     
+    contador=2; 
+    ids2();
+    backarriba();     
         
 }
 
@@ -95,16 +155,29 @@ function playa() {
     document.getElementById("portafolio").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
     document.getElementById("restaurante").style.display = "none";
     document.getElementById("costos").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
-    contador=3; 
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        });     
+    contador=2; 
+    ids2();
+    backarriba();  
         
+}
+
+function sharetj() {
+    document.getElementById("sharelink").style.display = "block";
+    document.getElementById("informacion").style.display = "none";
+    document.getElementById("portafolio").style.display = "none";
+    document.getElementById("side").style.display = "none";
+    document.getElementById("costos").style.display = "none";
+    document.getElementById("restaurante").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
+    document.getElementById("playa").style.display = "none";
+    conta=0;
+    contador=1;
+    ids1();    
+       
 }
 
 //   boton foto
@@ -123,24 +196,31 @@ function back() {
     if (contador==1) {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
-        document.getElementById("back").style.display = "none";
         document.getElementById("side").style.display = "none";
+        document.getElementById("sharelink").style.display = "none";
         conta=0;
         contador=0;
+        backarriba();
+        history.back();
 
     }
-    else{
+    else if(contador==2){
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("restaurante").style.display = "none";
         document.getElementById("playa").style.display = "none";
         document.getElementById("screen4").style.display = "none";
         contador=1;
+        backarriba();
+        ids1();
 
     }
-    
-    
+    else{
+            history.back();
+        
     }
+
+    } 
 
 
        //    menu laterl 
@@ -385,7 +465,101 @@ document.querySelector('.side')
             window.open(url);
           });
           
+          //ALERTAS>
+          function save(){
+            let url = `https://drive.google.com/u/0/uc?id=1VVSTlUODTMNHCKxJUVCxXnqyZcBFl6AC&export=download`;
+            window.open(url); 
+           };
+          
+          function ftuser() {
+              Swal.fire({
+                  title: 'Hostería Los Cedros',
+                  text: 'Alojamiento Mindo-Ecuador',
+                  imageUrl: 'img/logocedros.png',
+                  imageWidth: 100,
+                  confirmButtonText: 'Añadir a Contactos',
+                  showCloseButton: 'true',
+                  showCancelButton: true,
+            
+              
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    save();
+                    Swal.fire({
+                      position: 'top-end',
+                      icon: 'success',
+                      title: 'Descarga Correcta',
+                      showConfirmButton: false,
+                      timer: 1500
+                    })
+                  }
+                })
+          
+           
+          };
+          
+          function abrirpagos(){
+            let urla = `https://hosterialoscedrosdemindo.blogspot.com/p/opciones-de-pago.html`;
+            window.open(urla); 
+           };
     
+    
+           function verpagos(){
+            let urlsp = `https://hosterialoscedrosdemindo.blogspot.com/p/opciones-de-pago.html`;
+            window.open(urlsp); 
+           };
+    
+    
+          function msjpagos() {
+            Swal.fire({
+                title: 'Opciones de Pago',
+                icon: 'success',
+                html:
+               '<a href="https://api.whatsapp.com//send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Opciones%20de%20Pago%20https://hosterialoscedrosdemindo.blogspot.com/p/opciones-de-pago.html" class="botonp" ><span class="fa fa-share-alt"></span >&nbsp;Compartir nro. Cuenta</a>',
+                showCloseButton: true,
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ver nro. Cuenta',
+              })
+              .then((result) => {
+                if (result.isConfirmed) {
+                  verpagos();
+                  Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Información ',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                }
+              })
+          
+           
+          };
+          
+          function msj2() {
+            Swal.fire({
+            showCloseButton: true,
+            icon: 'success',
+            title: 'Tarjeta Digital',
+            text: 'Link Copiado a Portapapeles',
+            footer: 'CliconlineStudios'
+            });
+          
+           
+          };
+    
+    
+    
+    const $content = document.getElementById('textareacopy');
+          $btncopy = document.getElementById ('btcopi');
+          $title = document.getElementById ('titlelink')
+    
+          $btncopy.addEventListener('click', e => {
+            $content.select();
+            document.execCommand('copy')
+            msj2();
+          });
     
         
 
