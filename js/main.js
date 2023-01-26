@@ -28,8 +28,6 @@ function backarriba(){
         });       
 };
 
-let urlclick =`https://devivelo.blogspot.com`; 
-
 function backweb() {
    
     if (contador==1) {
@@ -326,13 +324,6 @@ function back() {
             
         }
 
-        // llevar cerrar side automatico
-
-        document.querySelector('.tarjeta').addEventListener('click',()=>{
-            document.getElementById("side").style.display = "none";
-            conta=0;
-            });
-
   // slider
  
   const slider = document.querySelector("#slider");
@@ -562,7 +553,29 @@ document.querySelector('.side')
           });
     
         
+// share tarjeta
 
+const shareData2 = {
+    title: 'Hostería los Cedros',
+    text: 'Enviado desde Cliconline App.Tarjeta Digital Hostería los Cedros',
+    url: 'https://hosterialoscedrosdemindo.blogspot.com',
+    }
+    
+    
+    // Share must be triggered by "user activation"
+   
+    var urltarjeta = 'https://hosterialoscedrosdemindo.blogspot.com'
+  
+    function sharetarjeta(){
+    if (navigator.share) {
+        navigator
+       .share(shareData2)
+       .then(() => console.log('correcto'))
+       .catch(error => console.log ('error sharing',error) );
+    }else {
+        sharetj();
+    }
+    } 
 
 
 
