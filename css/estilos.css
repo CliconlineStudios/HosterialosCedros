@@ -442,7 +442,7 @@ lottie-player {
 	display: block;
 	width: 100%;
 	height: auto;
-	padding: 10px 25%;
+	padding: 10px 5%;
 	object-fit: cover;
 
 	
@@ -470,11 +470,11 @@ lottie-player {
 }
 
 .slider__btn--left{
-	left: 10px;
+	left: 2px;
 }
 
 .slider__btn--rigth{
-	right: 10px;
+	right: 2px;
 }
 
 /* ----- ----- casaplaya ----- ----- */

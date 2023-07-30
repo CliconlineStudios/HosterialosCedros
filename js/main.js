@@ -45,7 +45,7 @@ function backweb() {
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("restaurante").style.display = "none";
-        document.getElementById("playa").style.display = "none";
+
         document.getElementById("screen4").style.display = "none";
         contador=1;
         backarriba();
@@ -67,7 +67,6 @@ function inicio() {
     document.getElementById("restaurante").style.display = "none";
     document.getElementById("screen4").style.display = "none";
     document.getElementById("side").style.display = "none";
-    document.getElementById("playa").style.display = "none";
     document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=0;
@@ -103,7 +102,6 @@ function categorias() {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("screen4").style.display = "none";
     document.getElementById("restaurante").style.display = "none";
-    document.getElementById("playa").style.display = "none";
     document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
@@ -120,7 +118,6 @@ function restaurante() {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("screen4").style.display = "none";
-    document.getElementById("playa").style.display = "none";
     document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
@@ -138,7 +135,6 @@ function planes() {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("restaurante").style.display = "none";
     document.getElementById("costos").style.display = "none";
-    document.getElementById("playa").style.display = "none";
     conta=0;
     contador=2; 
     ids2();
@@ -147,21 +143,6 @@ function planes() {
 }
 
 
-function playa() {
-    document.getElementById("playa").style.display = "block";
-    document.getElementById("screen4").style.display = "none";
-    document.getElementById("portafolio").style.display = "none";
-    document.getElementById("side").style.display = "none";
-    document.getElementById("informacion").style.display = "none";
-    document.getElementById("restaurante").style.display = "none";
-    document.getElementById("costos").style.display = "none";
-    document.getElementById("sharelink").style.display = "none";
-    conta=0;
-    contador=2; 
-    ids2();
-    backarriba();  
-        
-}
 
 function sharetj() {
     document.getElementById("sharelink").style.display = "block";
@@ -171,7 +152,6 @@ function sharetj() {
     document.getElementById("costos").style.display = "none";
     document.getElementById("restaurante").style.display = "none";
     document.getElementById("screen4").style.display = "none";
-    document.getElementById("playa").style.display = "none";
     conta=0;
     contador=1;
     ids1();    
@@ -206,7 +186,7 @@ function back() {
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("restaurante").style.display = "none";
-        document.getElementById("playa").style.display = "none";
+
         document.getElementById("screen4").style.display = "none";
         contador=1;
         backarriba();
@@ -251,54 +231,6 @@ function back() {
                document.getElementById("side").style.display = "none";
                conta=0;
                });
-   
-     // slider3
-    
-     const slider3 = document.querySelector("#slider3");
-     let sliderSection3 = document.querySelectorAll(".slider__section3");
-     let sliderSectionlast3 = sliderSection3[sliderSection3.length -1];
-     
-     const btnLeft3 = document.querySelector("#btn-left3");
-     const btnRight3 = document.querySelector("#btn-rigth3");
-     
-     slider3.insertAdjacentElement('afterbegin', sliderSectionlast3);
-     
-     function next3 (){
-         let sliderSectionFirst3 = document.querySelectorAll(".slider__section3")[0];
-         slider3.style.marginLeft = "-200%";
-         slider3.style.transition = "all 0.5s";
-         setTimeout(function(){
-             slider3.style.transition = "none";
-             slider3.insertAdjacentElement('beforeend', sliderSectionFirst3);
-             slider3.style.marginLeft = "-100%";
-         }, 500);  
-     }
-     
-     function Prev3 (){
-         let sliderSection3 = document.querySelectorAll(".slider__section3");
-         let sliderSectionLast3 = sliderSection3[sliderSection3.length -1];
-         slider3.style.marginLeft = "0";
-         slider3.style.transition = "all 0.5s";
-         setTimeout(function(){
-             slider3.style.transition = "none";
-             slider3.insertAdjacentElement('afterbegin', sliderSectionLast3);
-             slider3.style.marginLeft = "-100%";
-         }, 500);  
-     }
-     
-     btnRight3.addEventListener('click', function(){
-         next3();
-     });
-     
-     btnLeft3.addEventListener('click', function(){
-         Prev3();
-     });
-     
-     setInterval(function(){
-         next3();
-     },5000);  
-
-
 
    //    menu laterl 
 
@@ -368,7 +300,7 @@ function back() {
   
   setInterval(function(){
       next();
-  },5000);   
+  },3000);   
   
 
 // llevar arriba
