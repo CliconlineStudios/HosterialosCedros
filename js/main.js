@@ -14,6 +14,12 @@ function ids2 () {
 
 };
 
+function ids3 () {
+    ids = 'categorias.html';
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
+    pages = 'categorias.html';
+
+};
 
 
 window.addEventListener('popstate', e => {
@@ -48,7 +54,7 @@ function backweb() {
         document.getElementById("screen4").style.display = "none";
         contador=1;
         backarriba();
-        ids1();
+        ids2();
 
     }
     else{
@@ -104,7 +110,7 @@ function categorias() {
     document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
-    ids2();
+    ids3();
     backarriba(); 
     
     
