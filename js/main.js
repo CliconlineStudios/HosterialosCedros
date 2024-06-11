@@ -45,7 +45,6 @@ function backweb() {
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("restaurante").style.display = "none";
-
         document.getElementById("screen4").style.display = "none";
         contador=1;
         backarriba();
@@ -158,8 +157,6 @@ function sharetj() {
        
 }
 
-//   boton foto
-
 
 //   boton atras
 
@@ -180,7 +177,6 @@ function back() {
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("restaurante").style.display = "none";
-
         document.getElementById("screen4").style.display = "none";
         contador=1;
         backarriba();
@@ -250,7 +246,6 @@ function back() {
             
         }
 
-  
 
 // llevar arriba
     
