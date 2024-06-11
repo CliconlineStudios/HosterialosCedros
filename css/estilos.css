@@ -53,6 +53,120 @@ lottie-player {
 
 }
 
+.banners {
+	width: 100%;
+	background-size: 100% 100%;
+	position: static;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.side a:hover {
+	color: #25D366;
+	background: #000c1183;
+}
+
+.swiper-Active {
+	width: 100%;
+	position: relative;
+  }
+
+  @media screen  and  (max-width: 600px){
+	.swiper-Active  {
+		height: 170px;
+	}
+}
+  
+.swiper-Active img {
+	height: 200px;
+	object-fit: cover;
+	width: 100%;
+}
+
+
+@media screen  and  (max-width: 450px){
+	.swiper-Active img {
+		height: 170px;
+	}
+}
+
+@media screen  and  (min-width: 1000px){
+	.swiper-Active img{
+		height: 290px;
+	}
+  }
+
+.swiper-Active .swiper-button-prev,.swiper-Active .swiper-button-next {
+	color: #00020374;
+	--swiper-navigation-size: 15px;
+	background-color: #ffffff7a;
+	height: 30px;
+	width: 30px;
+	font-weight: bold;
+	opacity: 0;
+	
+	
+}
+
+.swiper-Active .swiper-button-prev{
+	border-radius: 0px 65px 65px 0px;
+	left: -5px;
+	
+
+}
+
+.swiper-Active .swiper-button-next{
+	border-radius: 65px 0px 0px 65px;
+	right: -5px;
+}
+
+
+.swiper-Active .swiper-button-prev:hover,
+.swiper-Active .swiper-button-next:hover{
+	color: #ffffff;
+	background-color: #0d8becae;
+}
+
+
+.swiper-Active:hover .swiper-button-prev,
+.swiper-Active:hover .swiper-button-next{
+	opacity: 1;
+}
+
+.btsn{
+	text-decoration: none;
+	display: inline-block;
+	position: absolute;
+	padding: 3px 0px;
+	bottom: 10px;
+	align-items: center;
+	text-align: left;	
+
+}
+
+.btsn .linkn {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 4px #ffffffdd;
+	color: #ffffff;
+	background-color: #0f4ce8af;
+	margin: 0px 5px;
+	padding: 5px 5px;
+
+	
+
+}
+.btsn .linkn:hover{
+	color: #ffffff;
+	background-color: #1515151f;
+	margin: 0px 5px;
+	padding: 5px 5px;
+	box-shadow: 1px 1px 4px #0026ffdd;
+}
+
 
 .portada  {
 	width: 100%;
